@@ -9,7 +9,12 @@ TDD stands for test driven development. As the name suggests, with TDD the code 
 - TDD is widely used and is it the cheapest way to test code
 
 ## How it's Used
-- Write 
+There are five steps to TDD. 
+- Understand the functionality/ programming requirements. You can't write code (or tests) if you don't know what it is you are trying to achive.
+- Translate the functionality/requirement into a test. Run the test before writing any code to see if it fails. If this is the first cycle, you want the test to fail as you haven't yet built the functionality. If it's not the first cycle, a pass might mean you have already written the code you need.
+- Write the code that fulfills the requirement. Run all the tests and they should pass.
+
+
 
 ## Unit Tests
 
@@ -27,3 +32,32 @@ TDD stands for test driven development. As the name suggests, with TDD the code 
 |assertNotIn(a, b)        |    a not in b          |3.1|
 |assertIsInstance(a, b)   |    isinstance(a, b)    |3.2|
 |assertNotIsInstance(a, b)|    not isinstance(a, b)|3.2|
+
+### Pytest and Unittest
+Running with ``python -m unittest descover -v``
+```
+test_add (test_unittest_simplecalc.CalcTest) ... ok
+test_divide (test_unittest_simplecalc.CalcTest) ... ok
+test_multiply (test_unittest_simplecalc.CalcTest) ... ok
+test_subtract (test_unittest_simplecalc.CalcTest) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+```
+
+Running with ``python -m pytest -v``
+```
+==================================== test session starts =====================================
+(truncated info)
+
+test_unittest_simplecalc.py::CalcTest::test_add PASSED                                  [ 25%] 
+test_unittest_simplecalc.py::CalcTest::test_divide PASSED                               [ 50%] 
+test_unittest_simplecalc.py::CalcTest::test_multiply PASSED                             [ 75%] 
+test_unittest_simplecalc.py::CalcTest::test_subtract PASSED                             [100%] 
+
+(truncated info)
+
+================================ 4 passed, 1 warning in 0.06s ================================
+```
