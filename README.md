@@ -11,7 +11,9 @@ TDD stands for test driven development. As the name suggests, with TDD the code 
 2. Translate the functionality/requirement into a test. Run the test before writing any code to see if it fails. If this is the first cycle, you want the test to fail as you haven't yet built the functionality. If it's not the first cycle, a pass might mean you have already written the code you need.
 3. Write the code that fulfills the requirement. Run all the tests and they should pass. Repeat this step if they don't.
 4. Refactor the code.
-5. Repeat (technically not a step, but you get the point).
+5. Repeat (technically not a step, but you get the point).  
+
+![Image showing TDD cycle](TDD.png)
 
 ## Unit Testing
 
