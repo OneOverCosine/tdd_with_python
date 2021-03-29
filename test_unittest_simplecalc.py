@@ -8,7 +8,6 @@ class CalcTest(unittest.TestCase):
     
     calc = SimpleCalc()
 
-    #
     def test_add(self):
         # You must have 'test' in the name of these functions - if not, the python interpreter won't know what to test
         # checks that 2 + 4 = 6 using the add method that was implemented
